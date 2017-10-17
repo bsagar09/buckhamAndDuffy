@@ -14,7 +14,8 @@
                         </div>
                     @endif
 
-                    You are logged in!
+                    <a href="/buckhamAndDuffy/public/users">View Users</a>
+                    <a href="/buckhamAndDuffy/public/users/create">Create User</a>
                 </div>
             </div>
         </div>
