@@ -76,7 +76,6 @@
 
         // summernote.keyup
         $('#summernote').on('summernote.keyup', function(we, e) {
-            console.log("hit");
             $('#content').val($('#summernote').summernote('code'));
         });
     });

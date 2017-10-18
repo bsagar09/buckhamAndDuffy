@@ -15,10 +15,23 @@
                     @endif
 
                     <table id="blogs" class="table">
+                        <table id="users" class="table">
+                        <thead>
+                            <tr>
+                                <th>Title</th>
+                                <th>Slug</th>
+                                <th>Content</th>
+                                <th></th>
+                            </tr>
+                        </thead>
+
                         <tbody>
                             @foreach($blogs as $key => $blog)
                                 <tr>
-                                    <td><a href="/buckhamAndDuffy/public/blog/{{$blog['id']}}">{{$blog['title']}}</a></td>
+                                    <td>{{$blog['title']}}</td>
+                                    <td>{{url($blog['slug'])}}</td>
+                                    <td>{!!substr($blog['content'], 0, 10).(strlen($blog['content']) > 10 ? '...' : '')!!}</td>
+                                    <td><a href="/buckhamAndDuffy/blog/{{$blog['slug']}}">View</a></td>
                                 </tr>
                             @endforeach
                         </tbody>

@@ -8,7 +8,7 @@
     <!-- CSRF Token -->
     <meta name="csrf-token" content="{{ csrf_token() }}">
 
-    <title>{{ config('app.name', 'Laravel') }}</title>
+    <title>{{ config('app.name', 'Buckham and Duffy') }}</title>
 
     <!-- Styles -->
     <link href="{{ asset('css/app.css') }}" rel="stylesheet">
@@ -52,7 +52,7 @@
                         @if (Auth::guest())
                             <li><a href="{{ route('login') }}">Login</a></li>
                             <li><a href="{{ route('register') }}">Register</a></li>
-                            <li><a href="/buckhamAndDuffy/public/blog">View Blogs</a></li>
+                            <li><a href="/buckhamAndDuffy/blog">View Blogs</a></li>
                         @else
 
                             <li class="dropdown">
@@ -62,11 +62,7 @@
 
                                 <ul class="dropdown-menu" role="menu">
                                     <li>
-                                        <a href="/buckhamAndDuffy/public/users">View</a>
-                                    </li>
-
-                                    <li>
-                                        <a href="/buckhamAndDuffy/public/users/create">Create</a>
+                                        <a href="/buckhamAndDuffy/users">View</a>
                                     </li>
                                 </ul>
                             </li>
@@ -78,11 +74,11 @@
 
                                 <ul class="dropdown-menu" role="menu">
                                     <li>
-                                        <a href="/buckhamAndDuffy/public/blog">View</a>
+                                        <a href="/buckhamAndDuffy/blog">View</a>
                                     </li>
 
                                     <li>
-                                        <a href="/buckhamAndDuffy/public/blog/create">Create</a>
+                                        <a href="/buckhamAndDuffy/blog/create">Create</a>
                                     </li>
                                 </ul>
                             </li>

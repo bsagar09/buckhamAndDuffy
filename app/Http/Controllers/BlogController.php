@@ -56,7 +56,7 @@ class BlogController extends Controller
     {
         $this->validate($request, [
             'title' => 'required|string|max:255',
-            'slug' => 'required|string|max:255',
+            'slug' => 'required|alpha_dash|string|max:255|unique:blogs,slug',
             'content' => 'required',
         ]);
 
@@ -77,9 +77,9 @@ class BlogController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function show($id)
+    public function show($slug)
     {
-        $blog = Blog::find($id);
+        $blog = Blog::where('slug', '=', $slug)->first();
 
         return view('blogs.show')->with('blog', $blog);
     }
