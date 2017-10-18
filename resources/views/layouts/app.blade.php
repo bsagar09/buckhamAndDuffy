@@ -11,7 +11,7 @@
     <title>{{ config('app.name', 'Buckham and Duffy') }}</title>
 
     <!-- Styles -->
-    <link href="{{ asset('css/app.css') }}" rel="stylesheet">
+    <link href="{{ URL::asset('public/css/app.css') }}" rel="stylesheet" type="text/css" >
     <link href="http://netdna.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.css" rel="stylesheet">
     <link href="http://cdnjs.cloudflare.com/ajax/libs/summernote/0.8.8/summernote.css" rel="stylesheet">
 
@@ -120,6 +120,6 @@
     </div>
 
     <!-- Scripts -->
-    <script src="{{ asset('js/summernote.min.js') }}"></script>
+    <script type="text/javascript" src="{{ asset('public/js/summernote.min.js') }}"></script>
 </body>
 </html>
